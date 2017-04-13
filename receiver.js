@@ -12,7 +12,7 @@ function regularReceive() {
     const mq = new AliMNS.MQ(config.MQName, account, 'hangzhou')
     mq.recvP(5).then(data => {
         console.log(data)
-        //mq.deleteP(data.Message.ReceiptHandle).then(console.log)
+        mq.deleteP(data.Message.ReceiptHandle).then(console.log)
         setTimeout(regularReceive, 100)
     }, err => {
         console.error(err.Error.Code)

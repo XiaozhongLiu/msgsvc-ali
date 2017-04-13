@@ -14,4 +14,4 @@ const mq = new AliMNS.MQ(config.MQName, account, 'hangzhou')
 // }
 
 // single msg
-mq.sendP(`Hello ali-mns`, 16, 5).then(console.log, console.error)
+mq.sendP('Hello from node', 16, 0).then(console.log, console.error)

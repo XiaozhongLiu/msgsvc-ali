@@ -5,6 +5,7 @@
   "author": "xiaozhong",
   "license": "ISC",
   "dependencies": {
-    "ali-mns": "^2.6.0"
+    "ali-mns": "^2.6.0",
+    "co": "^4.6.0"
   }
 }
