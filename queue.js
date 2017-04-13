@@ -28,12 +28,10 @@ function showQueues() {
 
 //createQueue()
 function createQueue() {
-    mns.createP('queue-test').then(
-        (data) => {
-            console.info(data)
-        },
-        (err) => {
-            console.error(err)
-        }
-    )
+    mns.createP('queue-test').then(console.log, console.error)
+}
+
+//deleteQueue()
+function deleteQueue() {
+    mns.deleteP("queue-test").then(console.log, console.error)
 }

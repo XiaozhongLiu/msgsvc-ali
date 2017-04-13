@@ -33,12 +33,5 @@ function createSubscribe() {
         'acs:mns:cn-hangzhou:1336279792771392:queues/queue-biz-callback',
         'BACKOFF_RETRY',
         'JSON'
-    ).then(
-        (data) => {
-            console.info(data)
-        },
-        (err) => {
-            console.error(err)
-        }
-    )
+    ).then(console.log, console.error)
 }
