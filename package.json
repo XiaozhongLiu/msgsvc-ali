@@ -1,0 +1,10 @@
+{
+  "name": "msgsvc-aliyun",
+  "version": "0.0.1",
+  "description": "Ali Msg Svc test",
+  "author": "xiaozhong",
+  "license": "ISC",
+  "dependencies": {
+    "ali-mns": "^2.6.0"
+  }
+}
