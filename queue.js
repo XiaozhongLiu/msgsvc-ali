@@ -28,7 +28,7 @@ function showQueues() {
 
 //createQueue()
 function createQueue() {
-    mns.createP('queue-test').then(console.log, console.error)
+    mns.createP('queue-core-server').then(console.log, console.error)
 }
 
 //deleteQueue()
