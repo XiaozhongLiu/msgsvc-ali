@@ -7,7 +7,7 @@ const mns = new AliMNS.MNS(account, "hangzhou");
 
 showQueues()
 function showQueues() {
-    co(function *() {
+    co(function* () {
         let rawQueues = (yield mns.listP()).Queues.Queue
         if (!rawQueues) return
         if (rawQueues && !rawQueues.length) {
@@ -21,14 +21,14 @@ function showQueues() {
         })
 
         for (let item of queues) {
-            console.log(yield item.getAttrsP())
+            console.log((yield item.getAttrsP()).Queue.QueueName)
         }
     }).catch(console.log)
 }
 
 //createQueue()
 function createQueue() {
-    mns.createP('queue-core-server').then(console.log, console.error)
+    mns.createP('queue-test', { LoggingEnabled: true }).then(console.log, console.error)
 }
 
 //deleteQueue()
